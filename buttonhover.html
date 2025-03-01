@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Hover Animation</title>
+    <style>
+        /* Basic Button Styles */
+        .btn {
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease; /* Smooth transition for all properties */
+        }
+
+        /* Hover Effect with Animation */
+        .btn:hover {
+            background-color: #0056b3; /* Darker shade of blue */
+            transform: scale(1.1); /* Scale up the button */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+        }
+
+        /* Optional: Add a pulse animation on hover */
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .btn.pulse:hover {
+            animation: pulse 0.5s infinite; /* Apply the pulse animation */
+        }
+    </style>
+</head>
+<body>
+    <!-- Simple Button -->
+    <button class="btn">Hover Me</button>
+
+    <!-- Button with Pulse Animation -->
+    <button class="btn pulse">Pulse on Hover</button>
+</body>
+</html>
